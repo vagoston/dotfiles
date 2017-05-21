@@ -89,7 +89,6 @@ export DOCKER_HOST=tcp://$HOST:2376 DOCKER_TLS_VERIFY=1
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
-alias vim=vim.tiny
 alias v=vim
 alias dc=docker-compose
 j() {
@@ -119,9 +118,16 @@ alias ddel="docker rm --force"
 dsc() {ds $(dpsa -q | head -n $1 |tail -n 1)}
 drec() {dre $(dpsa -q | head -n $1 |tail -n 1)}
 ddelc() {ddel $(dpsa -q | head -n $1 |tail -n 1)}
-alias dsa="docker stop $(dps -q |tr '\n' ' ')"
-alias drea="dre $(dpsa -q|tr '\n' ' '))"
-alias ddela="ddel  $(dpsa -q|tr '\n' ' ')"
+dsa() {"docker stop $(dps -q |tr '\n' ' ')"}
+drea() {"dre $(dpsa -q|tr '\n' ' '))"}
+ddela() {"ddel  $(dpsa -q|tr '\n' ' ')"}
 f() {find . -iname "*$1*"}
 h() (grep -irn "$1" .)
 alias k="clear"
+alias s="subl"
+alias dl="docker logs"
+alias i="docker inspect"
+alias arc="cat >> ~/.zshrc"
+alias vrc="v ~/.zshrc"
+alias m="more"
+alias a="alias"
