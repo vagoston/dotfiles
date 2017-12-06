@@ -79,7 +79,7 @@ source $ZSH/oh-my-zsh.sh
 # ssh
 export SSH_KEY_PATH="~/.ssh/rsa_id"
 
-export DOCKER_HOST=tcp://$HOST:2376 DOCKER_TLS_VERIFY=1
+# export DOCKER_HOST=tcp://$HOST:2376 DOCKER_TLS_VERIFY=1
 
 # Set personal aliases, overriding those provided by oh-my-zsh libs,
 # plugins, and themes. Aliases can be placed here, though oh-my-zsh
@@ -131,3 +131,5 @@ alias arc="cat >> ~/.zshrc"
 alias vrc="v ~/.zshrc"
 alias m="more"
 alias a="alias"
+alias e="extract"
+alias dcu="dc build && dc up"
