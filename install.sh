@@ -1,3 +1,3 @@
 #!/bin/sh
-mv ../.zshrc ../._zshrc 
-ln -s $(pwd)/.zshrc ~/.zshrc
+mv $(pwd)/.zshrc $(pwd)/._zshrc 
+ln -s $(pwd)/.dotfiles/.zshrc ~/.zshrc
