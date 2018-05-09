@@ -3,8 +3,7 @@ Install git:
 sudo apt-get install git \
 git config --global push.default simple \
 git config --global user.name "Vilmos Agoston" \
-git config --global user.email agoston.vilmos@gmail.com \
-git config --global core.editor vim.tiny
+git config --global user.email agoston.vilmos@gmail.com
 
 clone repo:
 
