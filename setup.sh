@@ -3,6 +3,9 @@ sudo apt install vim
 echo "syntax on\ncolorscheme desert" > ~/.vimrc
 git config --global core.editor vim
 sudo apt install docker.io
+sudo apt-get install virtualenv
+sudo apt install python-pip
+sudo apt install python3-pip
 sudo usermod -aG docker $(whoami)
 sudo apt install zsh
 sudo apt install curl
