@@ -1,6 +1,9 @@
 # If you come from bash you might have to change your $PATH.
-  export PATH=$HOME/bin:/usr/local/bin:$PATH
+  export PATH=$HOME/.cargo/bin:$HOME/bin:/usr/local/bin:$PATH
 
+  export GOROOT=/usr/local/go
+  export GOPATH=$HOME/go
+  export PATH=$GOPATH/bin:$GOROOT/bin:$PATH
 # Path to your oh-my-zsh installation.
   export ZSH=~/.oh-my-zsh
 
@@ -53,8 +56,7 @@ ZSH_THEME="michelebologna"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git docker kubectl ubuntu z extract)
-
+plugins=(git docker kubectl ubuntu z extract helm gcloud)
 
 source $ZSH/oh-my-zsh.sh
 # source $ZSH/zsh-git-prompt/zshrc.sh
@@ -122,7 +124,7 @@ dsa() {"docker stop $(dps -q |tr '\n' ' ')"}
 drea() {"dre $(dpsa -q|tr '\n' ' '))"}
 ddela() {"ddel  $(dpsa -q|tr '\n' ' ')"}
 f() {find . -iname "*$1*"}
-h() (grep -irn "$1" .)
+h() {grep -irn "$1" .}
 alias k="clear"
 alias s="subl"
 alias dl="docker logs"
@@ -133,3 +135,12 @@ alias m="more"
 alias a="alias"
 alias e="extract"
 alias dcu="dc build && dc up"
+c() {mkdir $1; cd $1}
+cl() {curl localhost:$1}
+export GEM_HOME=$HOME/.ruby
+export PATH="$PATH:$HOME/.ruby/bin"
+export PATH="$HOME/.rbenv/bin:$PATH"
+export PATH="$HOME/.pyenv/bin:$PATH"
+eval "$(rbenv init -)"
+export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
+
