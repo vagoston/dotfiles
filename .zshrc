@@ -137,10 +137,4 @@ alias e="extract"
 alias dcu="dc build && dc up"
 c() {mkdir $1; cd $1}
 cl() {curl localhost:$1}
-export GEM_HOME=$HOME/.ruby
-export PATH="$PATH:$HOME/.ruby/bin"
-export PATH="$HOME/.rbenv/bin:$PATH"
-export PATH="$HOME/.pyenv/bin:$PATH"
-eval "$(rbenv init -)"
-export PATH="$HOME/.rbenv/plugins/ruby-build/bin:$PATH"
 
