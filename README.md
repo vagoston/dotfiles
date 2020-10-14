@@ -8,6 +8,7 @@ git config --global user.email agoston.vilmos@gmail.com
 clone repo:
 
 git clone https://github.com/vagoston/dotfiles.git .dotfiles
+(git clone git@github.com:vagoston/dotfiles.git .dotfiles if ssh keay was already added)
 
 .dotfiles/setup.sh
 
